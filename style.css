@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background: url("images/background.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+a
+{
+    color: #fff;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    /*background: crimson;*/
+    font-family: 'Ubuntu' ,sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .max-width .logo a{
+    
+    color: #fff;
+    font-weight: 700;
+    font-size:2em;
+    transition: 0.5s;
+}
+
+.navbar .logo a span{
+    color: crimson;
+   
+}
+
+.navbar .max-width .logo:hover a{
+    color: crimson;
+    letter-spacing: 2px;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    background: url("images/background.jpg") no-repeat center;
+    height: 200vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 700px;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+
+
+/*Wissem*/
+.cardContain
+{
+    display: flex;
+    justify-content: center;
+    
+    color: #fff;
+    min-height: 460px;
+    font-family: 'Poppins' ,sans-serif;
+
+}
+.cardContain .cardBx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 420px;
+    padding-top: 120px;
+}
+.cardContain .cardBx .img
+{
+    background-color: rgb(0, 0, 0);
+    border: #fff solid 2px;
+    
+    display: flex;
+    height: 320px;
+    width: 50%;
+    align-items: center;
+    border-radius: 25px 0 0 25px;
+    justify-content: center;
+}
+.cardContain .cardBx .img .fa-cloud-upload-alt
+{
+    font-size: 4em;
+}
+.cardContain .cardBx .img .fa-cloud-upload-alt.active 
+{
+    display: none;
+}
+.imgInput
+{
+   opacity: 0;
+}
+
+
+.imgInput.active
+{
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+}
+
+
+.cardContain .cardBx .detailsBx
+{
+    display: none;
+
+}
+.cardContain .cardBx .detailsBx.active
+{
+    top: 0;
+    left: 0;
+    background-color: #c60506;
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cardContain .cardBx .detailsBx .inputs
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    justify-content: space-between;
+}
+.cardContain .cardBx .detailsBx .inputs .genre
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    font-size: small;
+}
+.cardContain .cardBx .detailsBx .inputs .checkGrp
+{
+    display: flex;
+    justify-content: space-between;
+}
+.cardContain .cardBx .detailsBx .inputs .checkGrp .checkRow
+{
+    display: flex;
+    flex-direction: column;
+}
+.cardContain .cardBx .detailsBx .inputs .checkGrp .checkRow:nth-child(2)
+{
+    max-height: min-content;
+    display: flex;
+}
+.cardContain .cardBx .detailsBx .inputs .textarea
+{
+    width: 245px;
+    height: 85px;
+    resize: none;
+}
+.cardContain .cardBx .detailsBx .inputsInterests
+{
+    display:flex;
+    align-items: center;
+    padding: 25px;
+    margin: 25px;
+}
+.cardContain .cardBx .detailsBx .inputsInterests div
+{
+    padding: 10px;
+}
+.btnSubmit
+{
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    border: #c60506 solid 2px;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+    margin-left: 50%;
+    background: none;
+    border-radius: 25px 25px;
+    opacity: 0%;
+    transition: 0.5s;
+}
+.btnSubmit.active
+{
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    border: #c60506 solid 2px;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+    margin-left: 50%;
+    background: none;
+    border-radius: 25px 25px;
+    opacity: 100%;
+}
+.btnSubmit:hover
+{
+    background: #c60506;
+}
+
+.cardContain .cardBx .BtnP
+{
+    display: flex;
+    color: #fff;
+    margin: 0 10px;
+}
+.cardContain .cardBx .BtnP button.active
+{
+    display: none;
+}
+.cardContain .cardBx .BtnP button
+{
+   
+    background: none;
+    border: #fff solid 2px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1.5em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.cardContain .cardBx .BtnP button[id="nextBtn"],
+.cardContain .cardBx .BtnP button[id="precBtn"]:hover
+{
+    padding: 0  20px 0 0; 
+}
+.cardContain .cardBx .BtnP button[id="precBtn"],
+.cardContain .cardBx .BtnP button[id="nextBtn"]:hover
+{
+    padding: 0 0 0 20px;
+}
+.cardContain .cardBx .BtnP button.active 
+{
+    display: none;
+}
+
+
+@media(max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+}
